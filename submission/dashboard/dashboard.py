@@ -12,7 +12,7 @@ st.title(
 )
 
 # Load Dataframe
-df = pd.read_csv("main_data.csv")
+df = pd.read_csv("dashboard/main_data.csv")
 
 m1, m2, m3= st.columns((1, 1, 1))
 m1.metric(label= "Data yang dipakai :", value= "Hourly Basis")
