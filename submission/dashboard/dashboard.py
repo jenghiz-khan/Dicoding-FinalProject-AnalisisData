@@ -85,4 +85,4 @@ with col2:
 # Menampilkan Korelasi
 
 st.subheader("Correlation")
-st.image("../data/corr.png")
+st.image("submission/data/corr.png")
