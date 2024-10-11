@@ -110,8 +110,3 @@ with col2:
             2. *Seasonal*: Pada hasil dekomposisi ini, komponen seasonal (`seasonal`) terlihat hampir konstan dan mendekati nol, menunjukkan bahwa rangkaian waktu tersebut mungkin tidak menunjukkan musiman yang signifikan. Hal ini dapat menunjukkan tidak adanya pola berulang secara berkala.
             3. *Residual*: Komponen residual menunjukkan variasi acak atau noise dalam data yang tidak dapat dijelaskan oleh komponen trend atau seasonal. Berguna untuk mengidentifikasi anomali atau kejadian tak terduga dalam data. Pada hasil decomposisi ini, komponen residual (`residual`) menjelaskan bila data masih mengandung fluktuasi yang tidak dapat dijelaskan oleh musiman atau tren.
             """)
-    
-# Menampilkan Korelasi
-
-st.subheader("Correlation")
-st.image("submission/data/corr.png")
