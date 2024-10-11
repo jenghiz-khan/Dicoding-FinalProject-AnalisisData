@@ -65,7 +65,7 @@ with s1:
     
 with s2:
     st.subheader("Correlation")
-    st.image("../data/corr.png", width= 780)
+    st.image("submission/data/corr.png", width= 780)
     st.markdown("""
                 Insight: dibandingkan dengan kolom `season` hingga `weathersit`, `temp` cukup mempengaruhi `cnt` yaitu 0.4
                 """)
