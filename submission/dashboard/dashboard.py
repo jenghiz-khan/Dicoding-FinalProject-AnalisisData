@@ -41,6 +41,35 @@ with d2:
             11. `datetime`: Penggabungan kolom `dteday` dan `hr`
             """)
 
+# Menampilkan Bar Chart Sewa Sepeda Berdasarkan Season dan Korelasi
+s1, s2 = st.columns(2)
+
+fig, ax = plt.subplots()
+
+season = df['season']
+count = df['cnt']
+
+colors = ["#D3D3D3", "#D3D3D3", "#72BCD4", "#D3D3D3"]
+
+sns.barplot(x=season, y=count, palette=colors, hue=season)
+ax.set_title('Total Rental Sepeda Berdasarkan Season')
+
+with s1:
+    st.subheader("Bar Chart Rental Sepeda Berdasarkan Musim")
+    st.pyplot(fig)
+    st.markdown("""
+                Insight:
+                - `season` = 3 merupakan musim terbanyak sepeda dirental
+                - Banyak diantara penyewa sepeda sudah termasuk `registered`
+                """)
+    
+with s2:
+    st.subheader("Correlation")
+    st.image("../data/corr.png", width= 780)
+    st.markdown("""
+                Insight: dibandingkan dengan kolom `season` hingga `weathersit`, `temp` cukup mempengaruhi `cnt` yaitu 0.4
+                """)
+
 # Menampilkan Hasil dekomposisi
 DecomposeResult = seasonal_decompose(df["cnt"], period=30)
 trend = DecomposeResult.trend
